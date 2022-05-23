@@ -4,8 +4,16 @@ pragma solidity 0.4.17;
 contract MyContract {
     string value;
 
-    function get() public {
-      return value;
+    constructor() public {
+      value = "myValue"
+
     }
 
+    function get() public view returns(string) {
+        return value;
+    }
+
+    function set(string _value) public {
+        value = _value;
+    }
 }
